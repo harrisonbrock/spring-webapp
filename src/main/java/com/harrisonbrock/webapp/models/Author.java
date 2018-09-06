@@ -1,7 +1,6 @@
 package com.harrisonbrock.webapp.models;
 
 import javax.persistence.*;
-import java.awt.print.Book;
 import java.util.HashSet;
 import java.util.Set;
 

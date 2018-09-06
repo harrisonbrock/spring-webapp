@@ -3,7 +3,6 @@ package com.harrisonbrock.webapp.models;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.StringTokenizer;
 
 @Entity
 public class Book {
@@ -16,6 +15,8 @@ public class Book {
     private String publisher;
 
     @ManyToMany
+    @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
+    inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors = new HashSet<>();
 
     public Book(String title, String isbn, String publisher) {

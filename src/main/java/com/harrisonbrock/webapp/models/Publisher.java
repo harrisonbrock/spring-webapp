@@ -22,6 +22,8 @@ public class Publisher {
         this.getAddressLine2 = getAddressLine2;
     }
 
+    public Publisher() {
+    }
 
     public Long getId() {
         return id;
